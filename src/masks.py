@@ -19,3 +19,6 @@ def get_mask_account(account_number: Union[str]) -> Union[str, None]:
         return f"**{str_account_number[-4:]}"
     else:
         return None
+
+print(get_mask_card_number('8888888888888888'))
+print(get_mask_account('88888888888888888888'))

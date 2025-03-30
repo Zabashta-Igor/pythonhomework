@@ -5,7 +5,7 @@ from src.processing import sort_by_date
 from src.widget import get_date
 from src.widget import mask_account_card
 
-print(get_mask_card_number("8888888888888888"))
+print(get_mask_card_number("7000792289606361"))
 print(get_mask_account("88888888888888888888"))
 
 

@@ -30,7 +30,7 @@ isort = "^6.0.1"
 [tool.mypy]
 disallow_untyped_defs=true
 warn_return_any=true
-exclude = "venv"
+exclude = "venv", ".tast"
 
 [tool.black]
 line-length = 119

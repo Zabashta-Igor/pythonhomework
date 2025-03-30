@@ -79,6 +79,9 @@ print(sort_by_date(operations))
 
 *   Python 3.13
 *   Poetry (для управления зависимостями)
+*   requests-2.32.3
+*   pytest-8.3.5
+*   pytest-cov-6.0.0
 
 
 ## Лицензия

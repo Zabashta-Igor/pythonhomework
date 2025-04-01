@@ -84,6 +84,27 @@ print(sort_by_date(operations))
 *   pytest-cov-6.0.0
 
 
+## Тестирование
+
+Запуск тестов
+pytest
+
+Покрытие кода
+Name                       Stmts   Miss  Cover
+----------------------------------------------
+src\__init__.py                0      0   100%
+src\masks.py                  10      0   100%
+src\processing.py              7      0   100%
+src\widget.py                 20      0   100%
+tests\__init__.py              0      0   100%
+tests\conftest.py             13      0   100%
+tests\test_masks.py           13      0   100%
+tests\test_processing.py       8      0   100%
+tests\test_widget.py           8      0   100%
+----------------------------------------------
+TOTAL                         79      0   100%
+
+
 ## Лицензия
 
 Этот проект лицензирован по [лицензии MIT](LICENSE).

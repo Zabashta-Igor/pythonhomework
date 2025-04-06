@@ -1,6 +1,8 @@
 import pytest
 
-from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
+from src.generators import card_number_generator
+from src.generators import filter_by_currency
+from src.generators import transaction_descriptions
 
 
 @pytest.mark.parametrize(
@@ -63,9 +65,6 @@ from src.generators import card_number_generator, filter_by_currency, transactio
         ),
     ],
 )
-
-
-
 def test_filter_by_currency1(make_transactions1: list, currency: str, expected: list) -> None:
     """Тест для функции фильтрации по коду валюты - норма"""
     assert list(filter_by_currency(make_transactions1, currency)) == expected

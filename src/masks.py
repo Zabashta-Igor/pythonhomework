@@ -1,5 +1,7 @@
 def get_mask_card_number(card_number: str) -> str | None:
-    """Принимает номер карты и возвращает номер карты с частично замененными цифрами на *"""
+    """Принимает номер карты и возвращает номер карты с частично замененными цифрами на *
+    :rtype: object
+    """
 
     str_card_number = str(card_number)
     if str_card_number.isdigit() and len(str_card_number) == 16:

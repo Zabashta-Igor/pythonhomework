@@ -93,16 +93,19 @@ pytest
 Name                       Stmts   Miss  Cover
 ----------------------------------------------
 src\__init__.py                0      0   100%
+src\generators.py             43      2    95%
 src\masks.py                  10      0   100%
 src\processing.py              7      0   100%
 src\widget.py                 20      0   100%
 tests\__init__.py              0      0   100%
-tests\conftest.py             13      0   100%
+tests\conftest.py             37      1    97%
+tests\test_generators.py      56      0   100%
 tests\test_masks.py           13      0   100%
 tests\test_processing.py       8      0   100%
 tests\test_widget.py           8      0   100%
 ----------------------------------------------
-TOTAL                         79      0   100%
+TOTAL                        202      3    99%
+
 
 
 ## Лицензия

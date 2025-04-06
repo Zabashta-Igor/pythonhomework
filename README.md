@@ -39,37 +39,16 @@
 Примеры использования функций:
 
 ~~~
-from src.widget import get_mask_card_number, get_mask_account, mask_account_card, get_date, filter_by_state, sort_by_date
-
-Маскировка номера карты
-card_number = "6831982470375048"
-masked_card = get_mask_card_number(card_number)
-print(f"Masked card number: {masked_card}") # Output: 6831 98** **** 5048
-
-Маскировка номера счета
-account_number = "12345678901234567890"
-masked_account = get_mask_account(account_number)
-print(f"Masked account number: {masked_account}") # Output: **7890
-
-Маскировка информации о карте/счете
-bank_details = "Visa Classic 6831982470375048"
-masked_details = mask_account_card(bank_details)
-print(f"Masked details: {masked_details}") # Output: Visa Classic 6831 98** **** 5048
-
-Преобразование даты
-date_string = "2023-10-26T00:00:00"
-formatted_date = get_date(date_string)
-print(f"Formatted date: {formatted_date}") # Output: 26.10.2023
-
-Пример данных для фильтрации и сортировки
-transactions: List[Dict] = [
-{"id": 1, "date": "2023-10-27T10:00:00", "state": "EXECUTED", "amount": 100},
-{"id": 2, "date": "2023-10-26T12:00:00", "state": "CANCELED", "amount": 50},
-{"id": 3, "date": "2023-10-28T14:00:00", "state": "EXECUTED", "amount": 200},
-]
-
-Сортировка по дате
-print(sort_by_date(operations))
+get_mask_card_number - Принимает номер карты и возвращает номер карты с частично замененными цифрами на *
+get_mask_account - Принимает номер счета и возвращает последние четыре цифры
+mask_account_card - Маскирует номер как карты так и счета
+get_date - Функция обработки даты в формате ДД-ММ-ГГГГ
+filter_by_state - Функция фильтрует список словарей по указанному значению ключа 'state'. По умолчанию state == EXECUTED
+sort_by_date - Функция сортирует список словарей, задающий порядок сортировки (по умолчанию — убывание)
+filter_by_currency - Функция обрабатывает список транзакций и поочередно выдает транзакции, где валюта операции соответствует заданной
+transaction_descriptions - Функция обрабатывает список транзакций и поочередно возвращает описание каждой из них
+card_number_generator - Функция представляет собой генератор номеров банковских карт:
+                        создает номера в заданном диапазоне и возвращает их в формате XXXX XXXX XXXX XXXX
 
 ~~~
 

@@ -49,6 +49,9 @@ filter_by_currency - Функция обрабатывает список тра
 transaction_descriptions - Функция обрабатывает список транзакций и поочередно возвращает описание каждой из них
 card_number_generator - Функция представляет собой генератор номеров банковских карт:
                         создает номера в заданном диапазоне и возвращает их в формате XXXX XXXX XXXX XXXX
+log: Функция-декоратор, которая фиксирует запуск других функций, передаваемые при запуске аргументы, 
+     вычисляет время исполнения, результаты, сообщает сведения об ошибках, если они возникли при выполнении. 
+     Может выводить полученные данные в консоль или записывать в файл.
 
 ~~~
 
@@ -72,18 +75,21 @@ pytest
 Name                       Stmts   Miss  Cover
 ----------------------------------------------
 src\__init__.py                0      0   100%
+src\decorators.py             31      0   100%
 src\generators.py             43      2    95%
 src\masks.py                  10      0   100%
 src\processing.py              7      0   100%
 src\widget.py                 20      0   100%
 tests\__init__.py              0      0   100%
 tests\conftest.py             37      1    97%
-tests\test_generators.py      56      0   100%
+tests\test_decorators.py      77      0   100%
+tests\test_generators.py      58      0   100%
 tests\test_masks.py           13      0   100%
 tests\test_processing.py       8      0   100%
 tests\test_widget.py           8      0   100%
 ----------------------------------------------
-TOTAL                        202      3    99%
+TOTAL                        312      3    99%
+
 
 
 
